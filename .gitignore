@@ -1,4 +1,10 @@
-data/
-venv/
 __pycache__/
+*.pyc
+.venv/
 .ipynb_checkpoints/
+# large raw data: never commit
+data/accepted*.csv
+data/*.csv.gz
+data/synthetic_loans.csv
+# trained models can be big; regenerate with run_all.py
+models/*.joblib
