@@ -1,0 +1,125 @@
+PS C:\Users\Anirudh\Downloads\lendingclub-ml> python run_all.py --data data/accepted_2007_to_2018Q4.csv.gz
+[data] loaded 2,260,701 rows from accepted_2007_to_2018Q4.csv.gz
+[data] finalised loans: 1,348,099 | Fully Paid: 80.0% | Default: 20.0%
+[split] {'train': 943669, 'val': 202215, 'test': 202215}
+C:\Users\Anirudh\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\linear_model\_logistic.py:1403: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' setto its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.
+  warnings.warn(
+[logreg] C=0.01  val macro-F1=0.5803
+C:\Users\Anirudh\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\linear_model\_logistic.py:1403: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' setto its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.
+  warnings.warn(
+[logreg] C=0.1   val macro-F1=0.5801
+C:\Users\Anirudh\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\linear_model\_logistic.py:1403: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' setto its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.
+  warnings.warn(
+[logreg] C=1     val macro-F1=0.5801
+C:\Users\Anirudh\AppData\Local\Programs\Python\Python314\Lib\site-packages\sklearn\linear_model\_logistic.py:1403: FutureWarning: 'penalty' was deprecated in version 1.8 and will be removed in 1.10. To avoid this warning, leave 'penalty' setto its default value and use 'l1_ratio' or 'C' instead. Use l1_ratio=0 instead of penalty='l2', l1_ratio=1 instead of penalty='l1', l1_ratio set to a float between 0 and 1 instead of penalty='elasticnet', and C=np.inf instead of penalty=None.
+  warnings.warn(
+[logreg] C=10    val macro-F1=0.5801
+[logreg] best C = 0.01
+
+=== logreg | train ===
+[[126250  62302]
+ [280179 474938]]
+              precision    recall  f1-score   support
+
+     Default       0.31      0.67      0.42    188552
+    Paid Off       0.88      0.63      0.73    755117
+
+    accuracy                           0.64    943669
+   macro avg       0.60      0.65      0.58    943669
+weighted avg       0.77      0.64      0.67    943669
+
+
+=== logreg | val ===
+[[ 27093  13311]
+ [ 59960 101851]]
+              precision    recall  f1-score   support
+
+     Default       0.31      0.67      0.43     40404
+    Paid Off       0.88      0.63      0.74    161811
+
+    accuracy                           0.64    202215
+   macro avg       0.60      0.65      0.58    202215
+weighted avg       0.77      0.64      0.67    202215
+
+
+=== logreg | test ===
+[[ 27012  13392]
+ [ 60226 101585]]
+              precision    recall  f1-score   support
+
+     Default       0.31      0.67      0.42     40404
+    Paid Off       0.88      0.63      0.73    161811
+
+    accuracy                           0.64    202215
+   macro avg       0.60      0.65      0.58    202215
+weighted avg       0.77      0.64      0.67    202215
+
+[data] loaded 2,260,701 rows from accepted_2007_to_2018Q4.csv.gz
+[data] finalised loans: 1,348,099 | Fully Paid: 80.0% | Default: 20.0%
+[split] {'train': 943669, 'val': 202215, 'test': 202215}
+[nn] paper (10,10,5,3) sigmoid    val macro-F1=0.5085
+[nn] (64,32) relu                 val macro-F1=0.5117
+[nn] (32,16,8) relu               val macro-F1=0.5072
+[nn] selected: (64,32) relu
+
+=== nn | train ===
+[[ 14363 174189]
+ [ 11262 743855]]
+              precision    recall  f1-score   support
+
+     Default       0.56      0.08      0.13    188552
+    Paid Off       0.81      0.99      0.89    755117
+
+    accuracy                           0.80    943669
+   macro avg       0.69      0.53      0.51    943669
+weighted avg       0.76      0.80      0.74    943669
+
+
+=== nn | val ===
+[[  3085  37319]
+ [  2435 159376]]
+              precision    recall  f1-score   support
+
+     Default       0.56      0.08      0.13     40404
+    Paid Off       0.81      0.98      0.89    161811
+
+    accuracy                           0.80    202215
+   macro avg       0.68      0.53      0.51    202215
+weighted avg       0.76      0.80      0.74    202215
+
+
+=== nn | test ===
+[[  3004  37400]
+ [  2547 159264]]
+              precision    recall  f1-score   support
+
+     Default       0.54      0.07      0.13     40404
+    Paid Off       0.81      0.98      0.89    161811
+
+    accuracy                           0.80    202215
+   macro avg       0.68      0.53      0.51    202215
+weighted avg       0.76      0.80      0.74    202215
+
+[data] loaded 2,260,701 rows from accepted_2007_to_2018Q4.csv.gz
+[data] finalised loans: 1,348,099 | Fully Paid: 80.0% | Default: 20.0%
+[split] {'train': 943669, 'val': 202215, 'test': 202215}
+[rf] depth=4   train MSE=0.0740 R2=0.033 | val MSE=0.0737 R2=0.033
+[rf] depth=8   train MSE=0.0728 R2=0.048 | val MSE=0.0727 R2=0.045
+[rf] depth=10  train MSE=0.0721 R2=0.057 | val MSE=0.0725 R2=0.048
+[rf] depth=12  train MSE=0.0709 R2=0.073 | val MSE=0.0723 R2=0.050
+[rf] best max_depth = 12
+
+=== RF regressor ===
+train MSE=0.0709 RMSE=0.266 R2=0.073
+val   MSE=0.0723 RMSE=0.269 R2=0.050
+test  MSE=0.0728 RMSE=0.270 R2=0.049
+
+=== Loan selection strategy (M chosen on validation) ===
+val   M=0.041 | invests in 1.00% of loans | avg return selected=6.87% vs all loans=-1.88%
+test  M=0.041 | invests in 0.98% of loans | avg return selected=7.75% vs all loans=-1.89%
+
+================ SUMMARY (test set) ================
+              model           task  precision(w)  recall(w)  f1(w)  default recall   AUC  test MSE  test R2  strategy return  % loans invested
+Logistic Regression classification         0.769      0.636  0.672           0.669 0.703       NaN      NaNNaN               NaN
+     Neural Network classification         0.756      0.802  0.737           0.074 0.715       NaN      NaNNaN               NaN
+      Random Forest     regression           NaN        NaN    NaN             NaN   NaN     0.073    0.049            0.077              0.01
